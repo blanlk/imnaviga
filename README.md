@@ -43,3 +43,7 @@ The official map image is loaded from Imagicaa's public map URL on first load. F
 8. Open that HTTPS URL in Chrome on Android, allow location, then use the app's two-point calibration at two separated, recognisable outdoor locations. Add it to your Home screen from Chrome's menu.
 
 Keep the repository public if using GitHub Free Pages. Do not upload secrets or personal data. GitHub Pages may take a few minutes to publish after the first save.
+
+
+## Offline map build (v2)
+The official park-map page supplied by the user is rasterized locally as `park-map.png` and displayed inside a native SVG viewport. Attraction pins, user marker and route overlays are drawn locally; the app no longer loads Leaflet or the map image from third-party servers. The service worker pre-caches `park-map.png` for offline use after the first successful visit. The park map itself remains an illustrated image; pins and walking paths are approximate, not surveyed.
